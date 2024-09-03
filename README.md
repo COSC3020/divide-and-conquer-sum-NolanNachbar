@@ -61,7 +61,7 @@ $$
 = 3^i T(n/3^i) + i \cdot n
 $$
 
-For \(i = \log n\):
+For $i = \log n$:
 
 $$
 T(n) = 3^{\log n} \cdot T(1) + n \cdot \log n
