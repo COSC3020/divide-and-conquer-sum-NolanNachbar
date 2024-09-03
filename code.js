@@ -8,8 +8,8 @@ function divideAndConquerSum (a) {
     var mid2 = Math.floor((2 / 3) * a.length);
     
     // Sum up the sub-arrays recursively
-    var sum1 = divideAndConquerSum(a.slice(0, mid1));
-    var sum2 = divideAndConquerSum(a.slice(mid1, mid2));
+    var sum1 = divideAndConquerSum(a.slice(0, mid1 - 1));
+    var sum2 = divideAndConquerSum(a.slice(mid1, mid2 - 1));
     var sum3 = divideAndConquerSum(a.slice(mid2, a.length));
 
     // Sum up the other sums
