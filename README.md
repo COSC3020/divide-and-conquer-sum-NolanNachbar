@@ -28,19 +28,17 @@ most important part. Add your answer to this markdown file.
 
 Recall for merge sort, the time complexity is $T(n) =  1 if n \le 1, 2T(n/2) + n \; if n > 1$. 
 
-1. For the divide-and-conquer sum algorithm if the array has 0,1, or 2 elements, it will add them up so the time complexity is 1. $T(1) = T(2) = 1$.
+1. For the divide-and-conquer sum algorithm if the array has 0 or 1elements, it will add them up so the time complexity is 1. $T(1) = 1$.
 2. Split the array into 3 approximately equal sized thirds. $1$
 3. Sum each halve recursively using mergesum. $3 T(n/3)$
 4. Merge the sums $n$
 Thus, our recurrence relation is:
 
 $$
-T(n) = 
-
-1 & if n \leq 2 \\
-
-3T(n/3) + n & if n > 2
-
+T(n) = \begin{cases}
+1 & \text{if} & n \leq 1 \\
+3\mathrm{T}(\frac{n}{3}) + n & \text{if} & n > 1
+\end{cases}
 $$
 
 Now to solve the recurrence relation by substitution:
