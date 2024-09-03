@@ -1,16 +1,16 @@
-function divideAndConquerSum (a) {
+function divideAndConquerSum(a) {
     // Handle the trivial cases
-    if (a.length < 1) {return 0;}
-    else if (a.length == 1) {return a[0];}
+    if (a.length === 0) return 0;
+    if (a.length === 1) return a[0];
 
     // Divide the array into three sub-arrays
-    var mid1 = Math.floor((1 / 3) * a.length);
-    var mid2 = Math.floor((2 / 3) * a.length);
+    const mid1 = Math.floor((a.length + 1) /3);
+    const mid2 = Math.floor(2 * (a.length + 1) / 3); 
+
     
-    // Sum up the sub-arrays recursively
-    var sum1 = divideAndConquerSum(a.slice(0, mid1 - 1));
-    var sum2 = divideAndConquerSum(a.slice(mid1, mid2 - 1));
-    var sum3 = divideAndConquerSum(a.slice(mid2, a.length));
+    const sum1 = divideAndConquerSum(a.slice(0, mid1));
+    const sum2 = divideAndConquerSum(a.slice(mid1, mid2));
+    const sum3 = divideAndConquerSum(a.slice(mid2));
 
     // Sum up the other sums
     return sum1 + sum2 + sum3;
