@@ -4,8 +4,8 @@ function divideAndConquerSum(a) {
     else if (a.length === 1) return a[0];
 
     // Divide the array into three sub arrays
-    var mid1 = Math.floor((a.length) * 1/3);
-    var mid2 = Math.floor((a.length) * 2/3);
+    var mid1 = Math.floor((a.length + 1) * 1/3);
+    var mid2 = Math.floor((a.length + 1) * 2/3);
     
     // Sum up the subarrays recurssively
     var sum1 = divideAndConquerSum(a.slice(0,mid1));
