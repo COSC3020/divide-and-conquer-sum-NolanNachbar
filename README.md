@@ -32,23 +32,49 @@ Recall for merge sort, the time complexity is $T(n) =  1 \; if n \le 1, 2T(n/2) 
 2. Split the array into 3 approximately equal sized thirds. $1$
 3. Sum each halve recursively using mergesum. $3 T(n/3)$
 4. Merge the sums $n$
+Thus, our recurrence relation is:
 
-Thus our recurrence relation is  $T(n) = \begin{cases} 1 \; is n \le 2 \\ 3T(n/3) + n \; if n > 2$.
+$$
+T(n) = 
+\begin{cases} 
+1 & \text{if } n \leq 2 \\
+3T(n/3) + n & \text{if } n > 2
+\end{cases}
+$$
 
 Now to solve the recurrence relation by substitution:
-\begin{align*}
-T(n) &= 3T(n/3) + n\\
-&= 3(3T(n/9) + n) + n\\
-\vdots\\
-&= 3^iT(n/3^i) + in\\
-\end{align*}
-for $i = log n$
-\begin{align*}
-T(n) &= 3^iT(n/3^i) + in\\
-&= nT(1) + n log(n)\\
-&= n + n log(n)\\
-&\in \Theta (n log n) 
-\end{align*}
+
+$$
+T(n) = 3T(n/3) + n
+$$
+
+$$
+= 3(3T(n/9) + n) + n
+$$
+
+$$
+\vdots
+$$
+
+$$
+= 3^i T(n/3^i) + i \cdot n
+$$
+
+For \(i = \log n\):
+
+$$
+T(n) = 3^{\log n} \cdot T(1) + n \cdot \log n
+$$
+
+$$
+T(n) = n + n \cdot \log n
+$$
+
+Thus, the time complexity is:
+
+$$
+T(n) \in \Theta(n \log n)
+$$
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
