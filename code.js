@@ -1,6 +1,6 @@
 function divideAndConquerSum (a) {
     // Handle the trivial cases
-    if (a.length == 0) {return 0;}
+    if (a.length < 1) {return 0;}
     else if (a.length == 1) {return a[0];}
 
     // Divide the array into three sub-arrays
