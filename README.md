@@ -26,7 +26,7 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Recall for merge sort, the time complexity is $T(n) =  1 \; if n \le 1, 2T(n/2) + n \; if n > 1$. 
+Recall for merge sort, the time complexity is $T(n) =  1 if n \le 1, 2T(n/2) + n \; if n > 1$. 
 
 1. For the divide-and-conquer sum algorithm if the array has 0,1, or 2 elements, it will add them up so the time complexity is 1. $T(1) = T(2) = 1$.
 2. Split the array into 3 approximately equal sized thirds. $1$
@@ -37,9 +37,9 @@ Thus, our recurrence relation is:
 $$
 T(n) = 
 
-1 & \text{if } n \leq 2 \\
+1 & if n \leq 2 \\
 
-3T(n/3) + n & \text{if } n > 2
+3T(n/3) + n & if n > 2
 
 $$
 
