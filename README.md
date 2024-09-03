@@ -36,10 +36,11 @@ Thus, our recurrence relation is:
 
 $$
 T(n) = 
-\begin{cases} 
+
 1 & \text{if } n \leq 2 \\
+
 3T(n/3) + n & \text{if } n > 2
-\end{cases}
+
 $$
 
 Now to solve the recurrence relation by substitution:
