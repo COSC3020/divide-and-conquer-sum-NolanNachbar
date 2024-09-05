@@ -26,7 +26,7 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-Recall for merge sort, the time complexity is $T(n) =  1 \text{if} n \le 1, 2T(n/2) + n  \text{if} n > 1$. 
+Recall for merge sort, the time complexity is $T(n) =  1 \text{ if } n \le 1, 2T(n/2) + n  \text{ if } n > 1$. 
 
 1. For the divide-and-conquer sum algorithm if the array has 0 or 1elements, it will add them up so the time complexity is 1. $T(1) = 1$.
 2. Split the array into 3 approximately equal sized thirds. $1$ 
@@ -36,8 +36,8 @@ Thus, our recurrence relation is:
 
 $$
 T(n) = \begin{cases}
-1 & \text{if} & n \leq 1 \\
-3\mathrm{T}(\frac{n}{3}) + n & \text{if} & n > 1
+1 & \text{ if } & n \leq 1 \\
+3\mathrm{T}(\frac{n}{3}) + n & \text{ if } & n > 1
 \end{cases}
 $$
 
@@ -77,8 +77,8 @@ $$
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
 
-I had originally completed this independently but I had help from the TA and Collin Davis debugging.
-The TA helped me add these lines
+I had originally completed this independently, including all of the logic and all of the code except for a couple small things I changed when debugging. I had help from the TA and Collin Davis when debugging. I modified these lines at the suggestion of the TA:
 const mid1 = Math.round((a.length) /3);
 const mid2 = 2*mid1; 
+
 
