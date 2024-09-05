@@ -30,8 +30,8 @@ Recall for merge sort, the time complexity is $T(n) =  1 \text{ if } n \le 1, 2T
 
 1. For the divide-and-conquer sum algorithm if the array has 0 or 1elements, it will add them up so the time complexity is 1. $T(1) = 1$.
 2. Split the array into 3 approximately equal sized thirds. $1$ 
-3. Sum each halve recursively using mergesum. $3 T(n/3)$
-4. Merge the sums $2$
+3. Sum each halve recursively. $3 T(n/3)$
+4. Merge the partial sums $2$
 Thus, our recurrence relation is:
 
 $$
